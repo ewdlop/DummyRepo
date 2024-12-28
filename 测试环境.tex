@@ -1,0 +1,146 @@
+\documentclass[12pt]{article}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+\usepackage{amsmath}
+\title{\LaTeX}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+  \LaTeX{} is a document preparation system
+  for the \TeX{}   typesetting program. It offers
+  programmable desktop publishing features and
+  extensive facilities for automating most aspects
+  of typesetting and desktop publishing, including
+  numbering and cross-referencing, tables and figures,
+  page layout, bibliographies,   and much more.
+  \LaTeX{} was originally written in 1984 by Leslie
+  Lamport and has become the dominant method for
+  using \TeX; few people write in plain \TeX{} anymore.
+  The current version is  \LaTeXe.
+\setmainfont[BoldFont=Adobe Heiti Std]{SimSun}
+
+这是一个测试。                             \\
+\textbf{测试环境}：XeTeX TeXLive2008      \\
+  \begin{align}
+    E &= mc^2                              \\
+    m &= \frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}}
+  \end{align}
+\end{document}
+
+For all \( x \in \mathbb{R} \), \( f(x) > 0 \):
+\[
+\forall x \in \mathbb{R}, \, f(x) > 0
+\]
+
+\end{document}
+
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+Sum of all elements \( x_i \) from 1 to \( n \):
+\[
+\sum_{i=1}^n x_i
+\]
+
+Product of all elements \( x_i \) from 1 to \( n \):
+\[
+\prod_{i=1}^n x_i
+\]
+
+\end{document}
+
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+For all elements \( x \) in the set \( A \), \( x^2 > 0 \):
+\[
+\forall x \in A, \, x^2 > 0
+\]
+
+\end{document}
+
+\documentclass{article}
+
+% Define a custom command for universal quantification
+\newcommand{\all}{\forall}
+
+\begin{document}
+
+Using the custom "all" command:
+\[
+\all x \in \mathbb{R}, \, x^2 \geq 0
+\]
+
+\end{document}
+
+\documentclass{article}
+\usepackage{amsmath, amssymb, graphicx, geometry, hyperref}
+
+\begin{document}
+
+A document that includes all commonly needed features.
+
+\end{document}
+
+\normalboard
+\begin{position}
+\piece{a}{1}{r}
+\piece{i}{1}{r}
+\piece{b}{1}{n}
+\piece{h}{1}{n}
+\piece{c}{1}{b}
+\end{position}
+
+\fenboard{%
+r5k1/%
+1b1p1ppp/%
+p7/%
+1p1Q4/%
+2p1r3/%
+PP4Pq/%
+BBP2b1P/%
+R4R1K w - - 0 20}
+\mbox{}\showboard
+
+\begin{landscape}
+〔■想　〕
+〔六シ　〕
+〔■起　〕
+〔六ˋ、〕
+〔■來　〕
+〔工ˊ　〕
+〔■那　〕
+〔ㄨˋ　〕
+
+\begin{music}
+\generalsignature{-1}%一個降記號
+\startextract%一行譜之開始
+\Notes \csong{紅}\Dqbu gg\en
+\Notes \ibu0f0\qb0f\nbbu0\qb0f\tbu0\qb0d\en
+\Notes \csong{顏}\qa{fd}\en
+\endextract%一行譜之結束
+\end{music}
+
+\chemfig{
+ H_3C-[:72]{\color{blue}N}*5(- 
+*6(-(={\color{red}O})-
+{\color{blue}N}(-CH_3)-
+(={\color{red}O})-
+{\color{blue}N}(-CH_3)-=)--
+{\color{blue}N}=-)}
+
+\begin{circuitikz}\draw
+  (0,0) to[C, l=10<\micro\farad>] (0,2) -- (0,3)
+        to[R, l=2.2<\kilo\ohm>] (4,3) -- (4,2)
+        to[L, l=12<\milli\henry>, i=$i_1$,v=b] (4,0) -- (0,0)
+  (4,2) { to[D*, *-*, color=red] (2,0) }
+  (0,2) to[R, l=1<\kilo\ohm>, *-] (2,2) 
+        to[cV, i=1,v=$\SI{.3}{\kilo\ohm} i_1$] (4,2)
+  (2,0) to[I, i=1<\milli\ampere>, -*] (2,2); 
+\end{circuitikz}
+\end{landscape}
